@@ -16,7 +16,7 @@ namespace Quadratic_equation
         {
             InitializeComponent();
         }
-
+        //
         private void Btn_is_Click(object sender, EventArgs e)
         {
             math get_sring = new math();
