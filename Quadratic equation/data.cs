@@ -21,6 +21,9 @@ namespace Quadratic_equation
         public Form2 fnOj { get; set; }
         private void Btn_1_Click(object sender, EventArgs e)
         {
+            fnOj.dvg_3.Columns.Clear();
+            fnOj.dvg_3.Rows.Clear();
+            fnOj.dvg_3.Columns.Add("جواب", "جواب");
 
             // string authors = "1*x^2+1*z^3+2*t^3=0";           2*x^2+1*z^3=0
 
@@ -246,9 +249,20 @@ namespace Quadratic_equation
                         if (Convert.ToString(_show[bb]) == "^")
                         {
                             result = Math.Pow(Convert.ToDouble(list_chki[k].da_vali), Convert.ToDouble(tvan));
-                            jj = result * Convert.ToDouble(zarb.Remove(0, 1));
 
-                            f_show = f_show.Replace($"{zarb}*{list_chki[k].vali}^{tvan}", $"+{Convert.ToString(jj)}");
+                            if (zarb[0] == '-')
+                            {
+                                jj = result * Convert.ToDouble(zarb);
+                                f_show = f_show.Replace($"{zarb}*{list_chki[k].vali}^{tvan}", $"{Convert.ToString(jj)}");
+                            }
+                            else
+                            {
+                                jj = result * Convert.ToDouble(zarb);
+                                f_show = f_show.Replace($"{zarb}*{list_chki[k].vali}^{tvan}", $"+{Convert.ToString(jj)}");
+                            }
+                           // jj = result * Convert.ToDouble(zarb);
+
+                           // f_show = f_show.Replace($"{zarb}*{list_chki[k].vali}^{tvan}", $"{Convert.ToString(jj)}");
                         }
                         else
                         {
@@ -289,13 +303,15 @@ namespace Quadratic_equation
                 {
                     double jvab = Convert.ToDouble(ggam) / ff;
                     double res = Math.Ceiling(Math.Pow(jvab, (double)1 / fa));
-                    list_data.Add(Convert.ToString(res));
+                   // list_data.Add(Convert.ToString(res));
+                    fnOj.dvg_3.Rows.Add(res);
                     // MessageBox.Show(Convert.ToString(res));
                 }
                 else
                 {
                     double jvab = Convert.ToDouble(ggam) / ff;
-                    list_data.Add(Convert.ToString(jvab));
+                   // list_data.Add(Convert.ToString(jvab));
+                    fnOj.dvg_3.Rows.Add(jvab);
                     // MessageBox.Show(Convert.ToString(jvab));
                 }
 
@@ -329,14 +345,14 @@ namespace Quadratic_equation
             targetGrid.Rows.AddRange(targetRows.ToArray());
             ///////////////////////////////////////////////////////////////////////////
             ///نمایش جدول دوم
-            fnOj.dvg_3.Columns.Clear();
-            fnOj.dvg_3.Rows.Clear();
-            fnOj.dvg_3.Columns.Add("جواب", "جواب");
+            //fnOj.dvg_3.Columns.Clear();
+            //fnOj.dvg_3.Rows.Clear();
+            //fnOj.dvg_3.Columns.Add("جواب", "جواب");
 
-            for (int ss = 0; ss < list_data.Count; ss++)
-            {
-                fnOj.dvg_3.Rows.Add(list_data[ss]);
-            }
+            //for (int ss = 0; ss < list_data.Count; ss++)
+            //{
+            //    fnOj.dvg_3.Rows.Add(list_data[ss]);
+            //}
 
             Close();
         }
