@@ -22,8 +22,8 @@ namespace Quadratic_equation
         private void Bt_is_Click(object sender, EventArgs e)
         {
             data da = new data();
-           
-            //string authors = "100x^3-12z^4+15y^5+200t=0";
+
+            //string authors = "100*x^3-12*z^4+15*y^5+200*t^1=0";  -1*x^1+1*q^1+2*z^1=1
             string authors = TB_1.Text;
             string aa = authors.Substring(0, 1);
             if (TB_1.Text[0] == '-')
@@ -41,14 +41,13 @@ namespace Quadratic_equation
                 if (author.Trim() != "")
                 {
                     da.dvg_2.Columns.Add(author, author);
-              //     dvg_1.Columns.Add(author, author);
                 }
             }
             ///////////////////////////////////////////////////
             da.lb_show.Text = authors.Replace("$", "");
             da._show = authors.ToString();
             da.fnOj = this;
-             da.ShowDialog();
+            da.ShowDialog();
         }
 
         private void Form2_Load(object sender, EventArgs e)

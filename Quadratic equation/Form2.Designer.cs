@@ -95,22 +95,29 @@
             // 
             // dvg_1
             // 
+            this.dvg_1.AllowUserToAddRows = false;
+            this.dvg_1.AllowUserToDeleteRows = false;
             this.dvg_1.BackgroundColor = System.Drawing.Color.White;
             this.dvg_1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvg_1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dvg_1.GridColor = System.Drawing.Color.Black;
             this.dvg_1.Location = new System.Drawing.Point(3, 3);
             this.dvg_1.Name = "dvg_1";
+            this.dvg_1.ReadOnly = true;
             this.dvg_1.Size = new System.Drawing.Size(367, 364);
             this.dvg_1.TabIndex = 3;
             // 
             // dvg_3
             // 
+            this.dvg_3.AllowUserToAddRows = false;
+            this.dvg_3.AllowUserToDeleteRows = false;
             this.dvg_3.BackgroundColor = System.Drawing.Color.White;
             this.dvg_3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvg_3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dvg_3.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dvg_3.Location = new System.Drawing.Point(376, 3);
             this.dvg_3.Name = "dvg_3";
+            this.dvg_3.ReadOnly = true;
             this.dvg_3.Size = new System.Drawing.Size(368, 364);
             this.dvg_3.TabIndex = 4;
             // 
