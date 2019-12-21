@@ -12,20 +12,19 @@ namespace Quadratic_equation
     public partial class Form2 : Form
     {
        
-        public data dataObj { get; set; }
         public Form2()
         {
             InitializeComponent();
 
         }
 
+        public data dataObj { get; set; }
         private void Bt_is_Click(object sender, EventArgs e)
         {
             data da = new data();
-
             //string authors = "100*x^3-12*z^4+15*y^5+200*t^1=0";  -1*x^1+1*q^1+2*z^1=1
             string authors = TB_1.Text;
-            string aa = authors.Substring(0, 1);
+           // string aa = authors.Substring(0, 1);
             if (TB_1.Text[0] == '-')
             {
                 authors += "$";

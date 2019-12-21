@@ -12,12 +12,12 @@ namespace Quadratic_equation
 {
     public partial class data : Form
     {
-        public string _show { get; set; }
         public data()
         {
             InitializeComponent();
 
         }
+        public string _show { get; set; }
         public Form2 fnOj { get; set; }
         private void Btn_1_Click(object sender, EventArgs e)
         {
